@@ -1,0 +1,7 @@
+transformers
+sentence-transformers
+bert-score
+nltk
+numpy
+scikit-learn
+streamlit 

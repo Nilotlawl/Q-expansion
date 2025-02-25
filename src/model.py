@@ -76,7 +76,7 @@ def refine_query(query):
     input_text = "expand: " + query
     input_ids = tokenizer.encode(input_text, return_tensors="pt").to(device)
     
-    outputs = t5_model.generate(input_ids, max_length=64, num_beams=4, early_stopping=True)
+    outputs = t5_model.generate(input_ids, max_length=64, num_beams=4, early_stopping=True, no_repeat_ngram_size = 2,repetition_penalty = 2.0)
     refined_query = tokenizer.decode(outputs[0], skip_special_tokens=True)
     return refined_query
 

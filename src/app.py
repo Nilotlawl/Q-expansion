@@ -26,6 +26,7 @@ def main_app():
                 st.write("**Resolved Query:**", resolved_query)
                 st.write("**Expanded Query:**", expanded_query)
                 st.write("**Assigned Topic:**", topic)
+                
         else:
             st.warning("Please enter a message.")
             
